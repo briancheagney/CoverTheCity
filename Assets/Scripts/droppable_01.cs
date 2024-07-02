@@ -6,6 +6,7 @@ public class DetectOverlap : MonoBehaviour
 
 {
     public AudioClip overlapSound;
+    public GameObject popupPanel;// Reference to the popup panel
     private AudioSource audioSource;
 
     void Start()
@@ -25,6 +26,14 @@ public class DetectOverlap : MonoBehaviour
         {
             Debug.LogError("No AudioClip assigned to overlapSound.");
         }
+        if (popupPanel == null)
+        {
+            Debug.LogError("No popup panel assigned.");
+        }
+        else
+        {
+            popupPanel.SetActive(false); // Ensure the popup is initially inactive
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -36,6 +45,10 @@ public class DetectOverlap : MonoBehaviour
             {
                 audioSource.PlayOneShot(overlapSound);
             }
+            if (popupPanel != null)
+            {
+                popupPanel.SetActive(true); // Show the popup panel
+            }
         }
     }
 
@@ -44,6 +57,10 @@ public class DetectOverlap : MonoBehaviour
         if (other.gameObject.CompareTag("Triangle"))
         {
             Debug.Log("Square is no longer overlapping the triangle!");
+            if (popupPanel != null)
+            {
+                popupPanel.SetActive(false); // Hide the popup panel
+            }
             // Add your logic here
         }
     }
