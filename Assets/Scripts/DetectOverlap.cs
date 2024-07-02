@@ -1,0 +1,102 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+
+public class DetectOverlap : MonoBehaviour
+{
+    public AudioClip overlapSound;
+    public GameObject popupPanel; // Reference to the popup panel
+    private AudioSource audioSource;
+
+    [SerializeField] // Allows DragAndDrop to be set in the Inspector while remaining private
+    private DragAndDrop dragAndDrop;
+
+    private PopUpController popupController;
+    private bool isOverlapHandled = false; // Track if overlap has been handled
+
+    void Start()
+    {
+        Debug.Log("DetectOverlap script started");
+
+        // Manually assign the AudioSource if it's not assigned in the Inspector
+        if (audioSource == null)
+        {
+            audioSource = GameObject.Find("AudioManager").GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                Debug.LogError("No AudioSource component found on the AudioManager GameObject.");
+            }
+        }
+
+        if (overlapSound == null)
+        {
+            Debug.LogError("No AudioClip assigned to overlapSound.");
+        }
+
+        if (popupPanel == null)
+        {
+            Debug.LogError("No popup panel assigned.");
+        }
+        else
+        {
+            popupPanel.SetActive(false); // Ensure the popup is initially inactive
+            popupController = popupPanel.GetComponent<PopUpController>();
+            if (popupController == null)
+            {
+                Debug.LogError("No PopupController component found on the popup panel.");
+            }
+        }
+
+        if (dragAndDrop == null)
+        {
+            dragAndDrop = GetComponent<DragAndDrop>();
+            if (dragAndDrop == null)
+            {
+                Debug.LogError("No DragAndDrop component found on this GameObject.");
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("OnTriggerEnter2D called");
+
+        if (!isOverlapHandled && other.gameObject.CompareTag("Triangle"))
+        {
+
+            Debug.Log("Square is overlapping the triangle!");
+            if (audioSource != null && overlapSound != null)
+            {
+                audioSource.PlayOneShot(overlapSound);
+            }
+
+            if (popupPanel != null)
+            {
+                Debug.Log("Setting popupPanel active");
+                popupPanel.SetActive(true); // Show the popup panel
+                popupController.Initialize(); // Initialize the popup state if needed
+            }
+
+            if (dragAndDrop != null)
+            {
+                dragAndDrop.SetDragging(false); // Disable dragging
+                dragAndDrop.enabled = false; // Disable the DragAndDrop script
+            }
+            isOverlapHandled = true; // Mark overlap as handled
+
+            // Disable interaction with the square
+            //EventSystem.current.SetSelectedGameObject(null);
+            //dragAndDrop.enabled = false; // Disable the DragAndDrop script
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Triangle"))
+        {
+            isOverlapHandled = false; // Reset overlap handling state
+        }
+    }
+}
+
+
+
