@@ -32,10 +32,10 @@ public class PopUpController : MonoBehaviour
             popupPanel.SetActive(false); // Hide the popup panel
         }
 
-        if (dragAndDrop != null)
-        {
-            dragAndDrop.SetDragging(true); // Re-enable dragging
-            dragAndDrop.enabled = true; // Enable the DragAndDrop script
-        }
+        //if (dragAndDrop != null)
+        //{
+        //    dragAndDrop.SetDragging(true); // Re-enable dragging
+        //    dragAndDrop.enabled = true; // Enable the DragAndDrop script
+        //}
     }
 }

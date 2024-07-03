@@ -87,6 +87,9 @@ public class DetectOverlap : MonoBehaviour
             // Disable interaction with the square
             //EventSystem.current.SetSelectedGameObject(null);
             //dragAndDrop.enabled = false; // Disable the DragAndDrop script
+            
+            // Destroy the green square after the overlap
+            Destroy(gameObject);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
