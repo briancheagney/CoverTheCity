@@ -7,8 +7,21 @@ public class PopUpController : MonoBehaviour
     private DragAndDrop dragAndDrop;
     private GameObject popupPanel;
 
+    private GameManager gameManager;
+
     void Start()
     {
+        // Check to see if gameManager exists
+        gameManager = FindObjectOfType<GameManager>();
+        if (gameManager == null)
+        {
+            Debug.LogError("No GameManager found in the scene.");
+        }
+        else
+        {
+            Debug.Log("GameManager found: " + gameManager.name);
+        }
+
         // Find the DragAndDrop component in the scene
         dragAndDrop = FindObjectOfType<DragAndDrop>();
         if (dragAndDrop == null)
@@ -30,6 +43,17 @@ public class PopUpController : MonoBehaviour
         if (popupPanel != null)
         {
             popupPanel.SetActive(false); // Hide the popup panel
+        }
+
+        // Notify the GameManager
+        if (gameManager != null)
+        {
+            Debug.Log("Notifying GameManager");
+            gameManager.ItemPlaced();
+        }
+        else
+        {
+            Debug.LogError("GameManager is null when trying to call ItemPlaced()");
         }
 
         //if (dragAndDrop != null)

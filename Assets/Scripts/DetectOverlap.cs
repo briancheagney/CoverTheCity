@@ -14,9 +14,21 @@ public class DetectOverlap : MonoBehaviour
     private PopUpController popupController;
     private bool isOverlapHandled = false; // Track if overlap has been handled
 
+    private GameManager gameManager;
     void Start()
     {
         Debug.Log("DetectOverlap script started");
+
+        // Check to see if gameManager exists
+        //gameManager = FindObjectOfType<GameManager>();
+        //if (gameManager == null)
+        //{
+        //    Debug.LogError("No GameManager found in the scene.");
+        //}
+        //else
+        //{
+        //    Debug.Log("GameManager found: " + gameManager.name);
+        //}
 
         // Manually assign the AudioSource if it's not assigned in the Inspector
         if (audioSource == null)
@@ -64,7 +76,7 @@ public class DetectOverlap : MonoBehaviour
         if (!isOverlapHandled && other.gameObject.CompareTag("Triangle"))
         {
 
-            Debug.Log("Square is overlapping the triangle!");
+            Debug.Log("object is overlapping the bag!");
             if (audioSource != null && overlapSound != null)
             {
                 audioSource.PlayOneShot(overlapSound);
@@ -84,10 +96,21 @@ public class DetectOverlap : MonoBehaviour
             }
             isOverlapHandled = true; // Mark overlap as handled
 
+            // Notify the GameManager
+            //if (gameManager != null)
+            //{
+            //    Debug.Log("Notifying GameManager");
+            //gameManager.ItemPlaced();
+            //}
+            //else
+            //{
+            //Debug.LogError("GameManager is null when trying to call ItemPlaced()");
+            //}
+
             // Disable interaction with the square
             //EventSystem.current.SetSelectedGameObject(null);
             //dragAndDrop.enabled = false; // Disable the DragAndDrop script
-            
+
             // Destroy the green square after the overlap
             Destroy(gameObject);
         }
