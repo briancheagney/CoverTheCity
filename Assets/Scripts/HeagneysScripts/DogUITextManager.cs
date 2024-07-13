@@ -9,6 +9,7 @@ public class TextManager : MonoBehaviour
     public TMP_Text uiText;
     public Button nextButton;
     public GameObject uiPanel; // Reference to the UI Panel
+    public GameObject dogDish; // reference the dog dish to enable it's draggability
 
     private string[] texts = {
         "Welcome to the game!",
@@ -43,7 +44,27 @@ public class TextManager : MonoBehaviour
             if (uiPanel != null)
             {
                 uiPanel.SetActive(false);
+                EnableDogDishDragging();
             }
+        }
+    }
+    private void EnableDogDishDragging()
+    {
+        if (dogDish != null)
+        {
+            DragAndDrop dragComponent = dogDish.GetComponent<DragAndDrop>();
+            if (dragComponent != null)
+            {
+                dragComponent.enabled = true;
+            }
+            else
+            {
+                Debug.LogError("No DragAndDrop component found on the dog dish.");
+            }
+        }
+        else
+        {
+            Debug.LogError("Dog dish GameObject is not assigned.");
         }
     }
 }

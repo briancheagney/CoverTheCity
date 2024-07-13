@@ -2,33 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DragManager : MonoBehaviour
+public class DDragManager : MonoBehaviour
 {
-    public GameObject dogDish;
-    public GameObject dogFood;
-    public GameObject blanket;
+    public GameObject ddogDish;
+    public GameObject ddogFood;
+    public GameObject dblanket;
 
     private int currentDragIndex = 0;
 
     private void Start()
     {
         // Enable only the dog dish at the start
-        SetDraggable(dogDish, true);
-        SetDraggable(dogFood, false);
-        SetDraggable(blanket, false);
+        SetDraggable(ddogDish, true);
+        SetDraggable(ddogFood, false);
+        SetDraggable(dblanket, false);
     }
 
     public void OnObjectPlaced(string objectName)
     {
-        if (objectName == dogDish.name && currentDragIndex == 0)
+        if (objectName == ddogDish.name && currentDragIndex == 0)
         {
             currentDragIndex++;
-            SetDraggable(dogFood, true);
+            SetDraggable(ddogFood, true);
         }
-        else if (objectName == dogFood.name && currentDragIndex == 1)
+        else if (objectName == ddogFood.name && currentDragIndex == 1)
         {
             currentDragIndex++;
-            SetDraggable(blanket, true);
+            SetDraggable(dblanket, true);
         }
     }
 
