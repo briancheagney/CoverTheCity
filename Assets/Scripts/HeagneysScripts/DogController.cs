@@ -8,15 +8,18 @@ public class DogController : MonoBehaviour
     public Transform targetPosition; // The position the dog should walk to
     public float speed = 2.0f; // Speed of the dog's movement
     public float scaleSpeed = 1.0f; // Speed of scaling
+    public int targetSortingOrder = 5; // The target Order in Layer
 
     private bool shouldMove = false;
     private Vector3 originalScale;
     private Vector3 targetScale;
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
         originalScale = transform.localScale;
-        targetScale = originalScale * 2; // Double the size
+        targetScale = originalScale * 3; // Double the size
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Get the SpriteRenderer component
     }
 
     void Update()
@@ -31,6 +34,7 @@ public class DogController : MonoBehaviour
     public void StartWalking()
     {
         animator.Play("DogWalk"); // Play the Walk animation
+        spriteRenderer.sortingOrder = targetSortingOrder; // Change the Order in Layer to the target sorting order
         shouldMove = true;
     }
 
@@ -43,7 +47,7 @@ public class DogController : MonoBehaviour
         if (Vector3.Distance(transform.position, targetPosition.position) < 0.001f)
         {
             shouldMove = false;
-            animator.Play("DogIdle"); // Play the Idle animation
+            animator.Play("DogEat2"); // Play the Eat animation
             //transform.localScale = originalScale; // Reset the scale to original size
         }
     }
