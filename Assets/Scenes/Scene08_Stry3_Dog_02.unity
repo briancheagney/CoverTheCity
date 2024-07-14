@@ -495,6 +495,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316647662}
   m_CullTransparentMesh: 1
+--- !u!1 &329189573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 329189574}
+  m_Layer: 0
+  m_Name: Walk-To-Empty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &329189574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329189573}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.47, y: -1.33, z: -0.019687656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1915129239}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341436732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1289,7 @@ MonoBehaviour:
   blanket: {fileID: 1258782964}
   dogBowl2: {fileID: 451718812}
   dogFood2: {fileID: 1857159726}
+  dogController: {fileID: 944857976}
 --- !u!4 &632649560
 Transform:
   m_ObjectHideFlags: 0
@@ -1672,6 +1704,7 @@ GameObject:
   - component: {fileID: 944857974}
   - component: {fileID: 944857973}
   - component: {fileID: 944857975}
+  - component: {fileID: 944857976}
   m_Layer: 0
   m_Name: dog_SI
   m_TagString: Untagged
@@ -1767,6 +1800,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &944857976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944857972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb222ad4540f3649a0ae7cafa885e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 944857975}
+  targetPosition: {fileID: 329189574}
+  speed: 1
+  scaleSpeed: 1
 --- !u!1001 &977042691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5090,6 +5139,7 @@ Transform:
   - {fileID: 1011681955}
   - {fileID: 451718813}
   - {fileID: 1857159728}
+  - {fileID: 329189574}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1948455034

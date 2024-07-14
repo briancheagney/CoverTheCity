@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject blanket;
     public GameObject dogBowl2;
     public GameObject dogFood2;
+    public DogController dogController; // Reference to the DogController script
 
     private void Awake()
     {
@@ -84,6 +85,7 @@ public class GameManager : MonoBehaviour
             {
                 dragComponent.enabled = true;
                 dogFood2.SetActive(true);
+                dogController.StartWalking(); // Start the dog walking
             }
             else
             {
