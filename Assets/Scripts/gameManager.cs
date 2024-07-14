@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     private int doggieitemsPlaced = 0; // Counter for doggie items placed
     public GameObject dogFood;
     public GameObject blanket;
+    public GameObject dogBowl2;
+    public GameObject dogFood2;
 
     private void Awake()
     {
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
         {
             EnableDogFoodDrag();
             Debug.LogError("EnableDogFoodDrag called");
+
         }
         else if (doggieitemsPlaced == 2)
         {
@@ -59,6 +62,7 @@ public class GameManager : MonoBehaviour
             if (dragComponent != null)
             {
                 dragComponent.enabled = true;
+                dogBowl2.SetActive(true);
             }
             else
             {
@@ -79,6 +83,7 @@ public class GameManager : MonoBehaviour
             if (dragComponent != null)
             {
                 dragComponent.enabled = true;
+                dogFood2.SetActive(true);
             }
             else
             {

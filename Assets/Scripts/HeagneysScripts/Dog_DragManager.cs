@@ -5,7 +5,9 @@ using UnityEngine;
 public class DragManager : MonoBehaviour
 {
     public DragAndDrop dogBowl;
+    public GameObject dogBowl2;
     public DragAndDrop dogFood;
+    public GameObject dogFood2;
     public DragAndDrop blanket;
 
     private void Start()
