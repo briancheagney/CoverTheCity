@@ -15,11 +15,19 @@ public class DogController : MonoBehaviour
     private Vector3 targetScale;
     private SpriteRenderer spriteRenderer;
 
+    private GameManager gameManager;
+    public GameObject blanket3;
+
     void Start()
     {
         originalScale = transform.localScale;
         targetScale = originalScale * 3; // Double the size
         spriteRenderer = GetComponent<SpriteRenderer>(); // Get the SpriteRenderer component
+        gameManager = FindObjectOfType<GameManager>();
+        if (gameManager == null)
+        {
+            Debug.LogError("GameManager not found in the scene.");
+        }
     }
 
     void Update()
@@ -49,6 +57,7 @@ public class DogController : MonoBehaviour
             shouldMove = false;
             animator.Play("DogEat2"); // Play the Eat animation
             //transform.localScale = originalScale; // Reset the scale to original size
+            gameManager.EnableBlanketDrag();
         }
     }
     private void ScaleDog()
@@ -61,4 +70,10 @@ public class DogController : MonoBehaviour
             transform.localScale = targetScale; // Ensure exact target scale is set
         }
     }
+
+    public void CoverDog()
+    {
+        animator.Play("DogCovered"); // Show Dog in blanket with tail wagging
+    }
+
 }

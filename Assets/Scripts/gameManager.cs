@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
         }
         else if (doggieitemsPlaced == 2)
         {
-            EnableBlanketDrag();
+            EnableDogWalk();
         }
     }
 
@@ -76,16 +76,39 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void EnableBlanketDrag()
+    public void EnableDogWalk()
     {
         if (blanket != null)
         {
             DragAndDrop dragComponent = blanket.GetComponent<DragAndDrop>();
             if (dragComponent != null)
             {
-                dragComponent.enabled = true;
-                dogFood2.SetActive(true);
+                //dragComponent.enabled = true; //I disabled this so that the blanket isn't draggable until the dog starts eating.
+                dogFood2.SetActive(true); //This is the dogfood dish with food in it!
                 dogController.StartWalking(); // Start the dog walking
+            }
+            else
+            {
+                Debug.LogError("No DragAndDrop component found on the blanket.");
+            }
+        }
+        else
+        {
+            Debug.LogError("blanket GameObject is not assigned.");
+        }
+    }
+
+
+    public void EnableBlanketDrag()
+    {
+        if (blanket != null)
+        {
+            DragAndDrop dragComponent = blanket.GetComponent<DragAndDrop>();
+            if (dragComponent != null)
+            {
+                dragComponent.enabled = true; //This is the new place where the blanket is enabled to be draggable.
+                //dogFood2.SetActive(true);
+                //dogController.StartWalking(); // Start the dog walking
             }
             else
             {

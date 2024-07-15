@@ -1392,7 +1392,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 635285995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04980d31090a2464f8ca7a612acdd8c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a613e856c97299488e7f50246ef991d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &708117125
@@ -1817,6 +1817,7 @@ MonoBehaviour:
   speed: 1
   scaleSpeed: 1
   targetSortingOrder: 5
+  blanket3: {fileID: 1258782964}
 --- !u!1001 &977042691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4957,7 +4958,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 635285999}
-        m_TargetAssemblyTypeName: DogPopUpController, Assembly-CSharp
+        m_TargetAssemblyTypeName: DogBlanketMaker, Assembly-CSharp
         m_MethodName: OnCloseButtonClick
         m_Mode: 1
         m_Arguments:
