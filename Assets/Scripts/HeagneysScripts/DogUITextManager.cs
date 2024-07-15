@@ -20,8 +20,21 @@ public class TextManager : MonoBehaviour
 
     private int currentTextIndex = 0;
 
+
+    // The following variables are for animating the female figure in the first UI.
+    public GameObject femaleFigure;
+    public GameObject textBubble;
+    public GameObject textBubble02;
+
+    private Animator animator;
+
     void Start()
     {
+        // The following is for the animation of the woman in the UI.
+        {
+            animator = femaleFigure.GetComponent<Animator>();
+        }
+
         // Initialize the text and button
         if (uiText != null)
             uiText.text = texts[currentTextIndex];
@@ -43,8 +56,15 @@ public class TextManager : MonoBehaviour
             // Deactivate the UI Panel
             if (uiPanel != null)
             {
-                uiPanel.SetActive(false);
+                // uiPanel.SetActive(false); INSTEAD of closing the panel, I'm going to animate the woman and close the text.
                 EnableDogDishDragging();
+
+                // Play the scaling and moving animation
+                animator.Play("ScaleDownAndMove");
+
+                // Deactivate the text bubble
+                textBubble.SetActive(false);
+                //textBubble02.SetActive(true);
             }
         }
     }
@@ -66,5 +86,11 @@ public class TextManager : MonoBehaviour
         {
             Debug.LogError("Dog dish GameObject is not assigned.");
         }
+    }
+    void OnScaleDownAndMoveAnimationEnd()
+    {
+        Debug.Log("Animation finished!");
+        // Your code to execute when the animation ends.
+        textBubble02.SetActive(true); // opens the second bubble once the animation finishes.
     }
 }

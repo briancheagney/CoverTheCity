@@ -15,6 +15,9 @@ public class DetectOverlap : MonoBehaviour
     private bool isOverlapHandled = false; // Track if overlap has been handled
 
     private GameManager gameManager;
+
+    public GameObject objectToShow;
+    public GameObject objectToHide;
     void Start()
     {
         Debug.Log("DetectOverlap script started");
@@ -95,6 +98,13 @@ public class DetectOverlap : MonoBehaviour
                 dragAndDrop.enabled = false; // Disable the DragAndDrop script
             }
             isOverlapHandled = true; // Mark overlap as handled
+
+            if (objectToShow != null)
+            {
+                Debug.Log("Showing Object");
+                objectToShow.SetActive(true);
+                objectToHide.SetActive(false);
+            }
 
             // Notify the GameManager
             //if (gameManager != null)
