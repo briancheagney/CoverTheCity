@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -18,20 +19,23 @@ public class DetectOverlap : MonoBehaviour
 
     public GameObject objectToShow;
     public GameObject objectToHide;
+    public GameObject objectToDraggable; //make this object draggable.
+    public int dogAnimInt; //If this is zero then no dogwalk; if it's 1, then dogwalk.
+    //public GameManager gameManager;
     void Start()
     {
         Debug.Log("DetectOverlap script started");
 
         // Check to see if gameManager exists
-        //gameManager = FindObjectOfType<GameManager>();
-        //if (gameManager == null)
-        //{
-        //    Debug.LogError("No GameManager found in the scene.");
-        //}
-        //else
-        //{
-        //    Debug.Log("GameManager found: " + gameManager.name);
-        //}
+        gameManager = FindObjectOfType<GameManager>();
+        if (gameManager == null)
+        {
+            Debug.LogError("No GameManager found in the scene.");
+        }
+        else
+        {
+            Debug.Log("GameManager found: " + gameManager.name);
+        }
 
         // Manually assign the AudioSource if it's not assigned in the Inspector
         if (audioSource == null)
@@ -104,6 +108,25 @@ public class DetectOverlap : MonoBehaviour
                 Debug.Log("Showing Object");
                 objectToShow.SetActive(true);
                 objectToHide.SetActive(false);
+                Debug.Log("dogAnimInt =" + dogAnimInt);
+                if (dogAnimInt == 1)
+                {
+                    gameManager.EnableDogWalk();
+                }
+                if (dogAnimInt == 2)
+                {
+                    gameManager.DogCover();
+                }
+                DragAndDrop dragComponent = objectToDraggable.GetComponent<DragAndDrop>();
+                if (dragComponent != null)
+                {
+                    dragComponent.enabled = true;
+                    objectToDraggable.SetActive(true);
+                }
+                else
+                {
+                    Debug.LogError("No DragAndDrop component found on the dog Food.");
+                }
             }
 
             // Notify the GameManager

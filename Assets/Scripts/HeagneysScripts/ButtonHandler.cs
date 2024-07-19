@@ -11,4 +11,9 @@ public class ButtonHandler : MonoBehaviour
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
     }
+    public void OpenCharSelect()
+    {
+        // Assuming the next scene is the next in the build order
+        SceneManager.LoadScene(1);
+    }
 }

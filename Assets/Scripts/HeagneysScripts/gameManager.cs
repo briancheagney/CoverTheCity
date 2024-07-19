@@ -98,7 +98,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    public void DogCover()
+    {
+        dogController.CoverDog();
+    }
     public void EnableBlanketDrag()
     {
         if (blanket != null)
