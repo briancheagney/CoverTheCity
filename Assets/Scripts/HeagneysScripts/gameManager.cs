@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject dogBowl2;
     public GameObject dogFood2;
     public DogController dogController; // Reference to the DogController script
+    public GameObject popupPrefab;
 
     private void Awake()
     {
@@ -26,8 +27,6 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
     }
-
-
 
     public void ItemPlaced()
     {
@@ -129,6 +128,11 @@ public class GameManager : MonoBehaviour
         // Assuming the next scene is the next in the build order
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
+    }
+
+    private void OpenPopup()
+    {
+        Instantiate(popupPrefab, Vector3.zero, Quaternion.identity);
     }
 }
 
