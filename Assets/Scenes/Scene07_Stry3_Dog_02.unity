@@ -1023,6 +1023,7 @@ MonoBehaviour:
   dogBowl2: {fileID: 451718812}
   dogFood2: {fileID: 1857159726}
   dogController: {fileID: 944857976}
+  popupPrefab: {fileID: 4576155817285646974, guid: 9d7dc833d67cc0c4e82fc36233305d65, type: 3}
 --- !u!4 &632649560
 Transform:
   m_ObjectHideFlags: 0

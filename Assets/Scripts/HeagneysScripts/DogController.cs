@@ -74,6 +74,8 @@ public class DogController : MonoBehaviour
     public void CoverDog()
     {
         animator.Play("DogCovered"); // Show Dog in blanket with tail wagging
+        //put reference to gamemanager open popup here
+
     }
 
 }
