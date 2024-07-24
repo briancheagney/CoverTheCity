@@ -8,6 +8,7 @@ public class DogController : MonoBehaviour
     public Transform targetPosition; // The position the dog should walk to
     public float speed = 2.0f; // Speed of the dog's movement
     public float scaleSpeed = 1.0f; // Speed of scaling
+    public float scaleAmount;
     public int targetSortingOrder = 5; // The target Order in Layer
 
     private bool shouldMove = false;
@@ -21,7 +22,9 @@ public class DogController : MonoBehaviour
     void Start()
     {
         originalScale = transform.localScale;
-        targetScale = originalScale * 3; // Double the size
+        //Debug.Log("original scale = " + originalScale);
+        targetScale = originalScale * scaleAmount; // changes the scale
+        //Debug.Log("target scale = " + targetScale);
         spriteRenderer = GetComponent<SpriteRenderer>(); // Get the SpriteRenderer component
         gameManager = FindObjectOfType<GameManager>();
         if (gameManager == null)
@@ -50,6 +53,9 @@ public class DogController : MonoBehaviour
     {
         float step = speed * Time.deltaTime; // Calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, targetPosition.position, step);
+        //Debug.Log("current scale = " + transform.localScale);
+        //transform.localScale = Vector3.MoveTowards(transform.localScale, targetScale, step);
+        //transform.localScale = transform.localScale * scaleAmount;
 
         // Check if the dog has reached the target position
         if (Vector3.Distance(transform.position, targetPosition.position) < 0.001f)
@@ -62,6 +68,7 @@ public class DogController : MonoBehaviour
     }
     private void ScaleDog()
     {
+        //Debug.Log("current scale = " + transform.localScale);
         transform.localScale = Vector3.MoveTowards(transform.localScale, targetScale, scaleSpeed * Time.deltaTime);
 
         // Check if the dog has reached the target scale

@@ -221,8 +221,8 @@ Transform:
   m_GameObject: {fileID: 223234446}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.138, y: 0.381, z: 0}
-  m_LocalScale: {x: 0.08805755, y: 0.08805755, z: 0.08805755}
+  m_LocalPosition: {x: 0.4018, y: 0.5568, z: 0}
+  m_LocalScale: {x: 0.106664106, y: 0.106664106, z: 0.106664106}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1106679474}
@@ -463,8 +463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 72, y: -35}
-  m_SizeDelta: {x: -432.0036, y: -144.0012}
+  m_AnchoredPosition: {x: 97.34589, y: -4.0216064}
+  m_SizeDelta: {x: -381.3118, y: -82.0444}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &359564843
 MonoBehaviour:
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce78506d9b3c55f48bfbec0fb899d511, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ced0049f31f436249a13c34d47b79ece, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -987,7 +987,7 @@ MonoBehaviour:
   dogBowl2: {fileID: 0}
   dogFood: {fileID: 0}
   dogFood2: {fileID: 0}
-  blanket: {fileID: 0}
+  blanket: {fileID: 1800346782}
 --- !u!1 &632649558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,8 +1077,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -224.7507, y: -84.701706}
-  m_SizeDelta: {x: -627.1337, y: -271.8123}
+  m_AnchoredPosition: {x: -186.45013, y: -102.72552}
+  m_SizeDelta: {x: -514.485, y: -253.7884}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &635285997
 MonoBehaviour:
@@ -1100,7 +1100,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce78506d9b3c55f48bfbec0fb899d511, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ced0049f31f436249a13c34d47b79ece, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1270,8 +1270,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -221.57, y: -179}
-  m_SizeDelta: {x: -580.8552, y: 204.4044}
+  m_AnchoredPosition: {x: -194.61, y: -173.9308}
+  m_SizeDelta: {x: -389.21, y: 214.5428}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &938941836
 MonoBehaviour:
@@ -1293,7 +1293,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ec6d87b2158326243b60a82be6d72b50, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b92201f7adfa62d47ac7f28865d6eb94, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1410,8 +1410,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: bd3cdca108e8c8c468799b58706d456c, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: 539608a3b03babd408f00ce1cc89e006, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1431,8 +1431,8 @@ Transform:
   m_GameObject: {fileID: 944857972}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.53663605, y: 0.53663605, z: 0.53663605}
+  m_LocalPosition: {x: 0.28, y: 0.13, z: 0}
+  m_LocalScale: {x: 0.044987764, y: 0.044932548, z: 0.050198358}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1106679474}
@@ -1473,7 +1473,8 @@ MonoBehaviour:
   animator: {fileID: 944857975}
   targetPosition: {fileID: 329189574}
   speed: 1
-  scaleSpeed: 1
+  scaleSpeed: 0.05
+  scaleAmount: 2
   targetSortingOrder: 5
   blanket3: {fileID: 1258782964}
 --- !u!1001 &977042691
@@ -1678,10 +1679,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Blanket Pop Up
+  m_text: 'See?
 
-
-    I will describe the significance of the blanket'
+    Even well-used blankets are helpful!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1908,8 +1908,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -191, y: -114}
-  m_SizeDelta: {x: -632.1509, y: -270.657}
+  m_AnchoredPosition: {x: -187, y: -99}
+  m_SizeDelta: {x: -520.6287, y: -146.7435}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005495413
 MonoBehaviour:
@@ -1931,7 +1931,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce78506d9b3c55f48bfbec0fb899d511, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ced0049f31f436249a13c34d47b79ece, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2027,8 +2027,8 @@ Transform:
   m_GameObject: {fileID: 1011681953}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.26, y: -0.1988, z: 0}
-  m_LocalScale: {x: 0.2275366, y: 0.23498094, z: 0.18079893}
+  m_LocalPosition: {x: -2.483, y: -0.1731, z: 0}
+  m_LocalScale: {x: 0.24064271, y: 0.2380122, z: 0.18079893}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1915129239}
@@ -2489,8 +2489,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -159.9795, y: -62.3697}
-  m_SizeDelta: {x: -637.2828, y: -312.5735}
+  m_AnchoredPosition: {x: -187.01521, y: -101.79671}
+  m_SizeDelta: {x: -520.1283, y: -263.0081}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1144719130
 MonoBehaviour:
@@ -2512,7 +2512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce78506d9b3c55f48bfbec0fb899d511, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ced0049f31f436249a13c34d47b79ece, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3317,8 +3317,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.9987, y: 2.1881}
-  m_SizeDelta: {x: 222.7187, y: 133.05}
+  m_AnchoredPosition: {x: 18.1906, y: -4.4415}
+  m_SizeDelta: {x: 219.1025, y: 119.7907}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434439160
 MonoBehaviour:
@@ -3340,11 +3340,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'I am a pop-up.
-
-
-    I will say something about the empty dog dish like,
-    hey, it needs food.'
+  m_text: Try filling that EMPTY dog dish with FOOD!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3371,8 +3367,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17.3
-  m_fontSizeBase: 17.3
+  m_fontSize: 27.11
+  m_fontSizeBase: 27.11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3642,8 +3638,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -232.72618, y: -114.59638}
-  m_SizeDelta: {x: -641.0847, y: -311.672}
+  m_AnchoredPosition: {x: -187.10352, y: -100.51531}
+  m_SizeDelta: {x: -525.0566, y: -265.4861}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1492409207
 MonoBehaviour:
@@ -3665,7 +3661,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ce78506d9b3c55f48bfbec0fb899d511, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ced0049f31f436249a13c34d47b79ece, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3996,8 +3992,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.4099, y: -4.7086}
-  m_SizeDelta: {x: 196.8158, y: 128.91}
+  m_AnchoredPosition: {x: 17.2045, y: -7.7221}
+  m_SizeDelta: {x: 189.5834, y: 122.8831}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777657815
 MonoBehaviour:
@@ -4019,10 +4015,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'I am a pop-up.
-
-
-    I will describe the significance of the food.'
+  m_text: While she's eating, wrap a blanket around her to comfort her.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4049,8 +4042,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.12
-  m_fontSizeBase: 20.12
+  m_fontSize: 22.6
+  m_fontSizeBase: 22.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4337,7 +4330,7 @@ PrefabInstance:
     - target: {fileID: 8950613481111928129, guid: 759da6ae364e6ca48ac5e450bdc78f30, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: cbe6094cea3b7f3418d5824be237b219, type: 3}
+      objectReference: {fileID: 21300000, guid: f8a5386d9dbbeca40b141825238e149e, type: 3}
     - target: {fileID: 8950613481111928129, guid: 759da6ae364e6ca48ac5e450bdc78f30, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -4663,7 +4656,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859091269}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
@@ -4712,7 +4705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -101}
+  m_AnchoredPosition: {x: 14, y: -49.337}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862949462

@@ -16,4 +16,22 @@ public class ButtonHandler : MonoBehaviour
         // Assuming the next scene is the next in the build order
         SceneManager.LoadScene(1);
     }
+
+    public void OpenStory1()
+    {
+        // Assuming the next scene is the next in the build order
+        SceneManager.LoadScene(2);
+    }
+
+    public void OpenStory2()
+    {
+        // Assuming the next scene is the next in the build order
+        SceneManager.LoadScene(5);
+    }
+
+    public void OpenStory3()
+    {
+        // Assuming the next scene is the next in the build order
+        SceneManager.LoadScene(6);
+    }
 }
