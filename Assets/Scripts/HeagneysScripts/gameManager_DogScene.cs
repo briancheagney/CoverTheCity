@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public GameObject dogFood2;
     public DogController dogController; // Reference to the DogController script
     public GameObject popupPrefab;
+    public GameObject inventoryBackground; //this is the backdrop for the inventory
 
     private void Awake()
     {
@@ -100,6 +101,7 @@ public class GameManager : MonoBehaviour
     public void DogCover()
     {
         dogController.CoverDog();
+        inventoryBackground.SetActive(false);
     }
     public void EnableBlanketDrag()
     {
