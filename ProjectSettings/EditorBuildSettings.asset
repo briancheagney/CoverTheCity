@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene04_Stry1_Pack.unity
     guid: 07e38522ad4e0cd4996ea9dfcf01632a
   - enabled: 1
-    path: Assets/Scenes/Scene05_Stroy1_Outro.unity
-    guid: 7e60868b59eefe14fb848f0a91b1a391
+    path: Assets/Scenes/Scene05B_Stry1_Outro.unity
+    guid: 8e0ad1740ac791447adcb1878d616b56
   - enabled: 1
     path: Assets/Scenes/Scene06_Stry2_Apt.unity
     guid: 4d5c9439433a0e04cad77f444a473c37
