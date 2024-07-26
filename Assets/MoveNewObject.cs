@@ -1,4 +1,3 @@
-
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -65,6 +64,14 @@ public class MoveNewObject : MonoBehaviour
     {
         if (spriteObject != null && newSprite != null)
         {
+            // Stop the animation
+            Animator animator = spriteObject.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.enabled = false;
+            }
+
+            // Change the sprite
             SpriteRenderer spriteRenderer = spriteObject.GetComponent<SpriteRenderer>();
             if (spriteRenderer != null)
             {
