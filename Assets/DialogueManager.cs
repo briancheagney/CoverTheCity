@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMesh dialogueText;
+    public TMP_Text dialogueText;
     public Button nextButton;
     public string[] dialogueLines;
     private int currentLineIndex = 0;
