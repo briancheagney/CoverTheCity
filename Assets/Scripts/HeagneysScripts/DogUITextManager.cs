@@ -12,9 +12,9 @@ public class TextManager : MonoBehaviour
     public GameObject dogDish; // reference the dog dish to enable it's draggability
 
     private string[] texts = {
-        "Hi there! We're going to try to rescue that scared dog.",
-        "We'll need to reassure her using food and lastly a blanket.",
-        "I'll guide you. Let's do it!"
+        "Hi there! Will you help me rescue that abandoned dog?.",
+        "We'll have to coax her our from underneath the car.",
+        "I'll guide you along. Let's do it!"
     };
 
     private int currentTextIndex = 0;
