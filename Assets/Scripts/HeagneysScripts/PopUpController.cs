@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,6 +32,19 @@ public class PopUpController : MonoBehaviour
         // Get the popup panel GameObject
         popupPanel = gameObject;
     }
+
+    //new code called outside of closebutton
+    public void ReEnableAllDraggables()
+    {
+        DragAndDrop[] allDraggables = FindObjectsOfType<DragAndDrop>();
+        foreach (DragAndDrop d in allDraggables)
+        {
+            d.enabled = true;
+        }
+    }
+    //end new code called outside of closebutton
+
+
     public void Initialize()
     {
         // Reset any states or UI elements in the popup if needed
@@ -43,6 +56,9 @@ public class PopUpController : MonoBehaviour
         if (popupPanel != null)
         {
             popupPanel.SetActive(false); // Hide the popup panel
+            //begin new code
+            ReEnableAllDraggables();     // This happens AFTER clicking close
+            //end new code
         }
 
         // Notify the GameManager

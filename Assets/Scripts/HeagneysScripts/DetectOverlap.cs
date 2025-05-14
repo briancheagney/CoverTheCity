@@ -98,8 +98,17 @@ public class DetectOverlap : MonoBehaviour
 
             if (dragAndDrop != null)
             {
+                //draggable_02.SetDragging(false);
                 dragAndDrop.SetDragging(false); // Disable dragging
                 dragAndDrop.enabled = false; // Disable the DragAndDrop script
+                //start new code
+                DragAndDrop[] allDraggables = FindObjectsOfType<DragAndDrop>();
+                foreach (DragAndDrop d in allDraggables)
+                {
+                    d.SetDragging(false);
+                    d.enabled = false;
+                }
+                //end new code
             }
             isOverlapHandled = true; // Mark overlap as handled
 
