@@ -9,6 +9,7 @@ public class MoveObject : MonoBehaviour
     public float speed = 2f; // Speed of movement
     public float delay = 2f; // Delay before moving
     public GameObject newObject; // Reference to the new object to appear
+    public GameObject enddialoguebox; //this is the last dialogue box that will give us a button to take us to the character select
 
     private bool shouldMove = false;
 
@@ -35,6 +36,10 @@ public class MoveObject : MonoBehaviour
                 if (newObject != null)
                 {
                     newObject.SetActive(true);
+                }
+                if (enddialoguebox != null)
+                {
+                    enddialoguebox.SetActive(true);
                 }
             }
         }

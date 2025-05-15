@@ -12,6 +12,7 @@ public class MoveNewObject : MonoBehaviour
     public Vector3 targetPosition; // Target position to move to
     public float speed = 2f; // Speed of movement
     public float delay = 2f; // Delay before moving
+    public GameObject enddialoguebox; //this is the last dialogue box that will give us a button to take us to the character select
 
     private bool shouldMove = false;
 
@@ -76,6 +77,10 @@ public class MoveNewObject : MonoBehaviour
             if (spriteRenderer != null)
             {
                 spriteRenderer.sprite = newSprite;
+            }
+            if (enddialoguebox != null)
+            {
+                enddialoguebox.SetActive(true);
             }
         }
     }
