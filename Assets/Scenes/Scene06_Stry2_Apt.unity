@@ -242,8 +242,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 391, y: 367.96}
-  m_SizeDelta: {x: 398.1489, y: 288.075}
+  m_AnchoredPosition: {x: 262, y: 369.72}
+  m_SizeDelta: {x: 588.4556, y: 284.5509}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &171475393
 MonoBehaviour:
@@ -398,7 +398,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300137611}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 341c441a48a3f284dbfe7378b6fae618, type: 3}
   m_Name: 
@@ -649,7 +649,7 @@ MonoBehaviour:
   spriteObject: {fileID: 300137611}
   newSprite: {fileID: 21300000, guid: 23be350d03ce12545b5bdfe2e239e4bd, type: 3}
   targetPosition: {x: 1.3, y: -0.5, z: 0}
-  speed: 0.75
+  speed: 1
   delay: 0
 --- !u!114 &334109487
 MonoBehaviour:
@@ -666,10 +666,10 @@ MonoBehaviour:
   dialogueText: {fileID: 1356078847}
   nextButton: {fileID: 869630283}
   dialogueLines:
-  - Hi this is the first line!
-  - Second
-  - 
-  - 
+  - 'Not everyone who needs blankets sleeps on the street. '
+  - 'Many households walk the edge, paycheck to paycheck. '
+  - When heating costs rise...
+  - ...many choose to endure cold nights to make do.
   clicksToActivateScript: 3
   scriptToActivate: {fileID: 1989237687}
   dialoguePanel: {fileID: 171475390}
@@ -961,7 +961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -832, y: 19}
+  m_AnchoredPosition: {x: 746.4597, y: -0.000013351}
   m_SizeDelta: {x: 2688, y: 1024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &761685659
@@ -1040,7 +1040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 136, y: -99}
+  m_AnchoredPosition: {x: 168, y: -75}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &869630283
@@ -1579,14 +1579,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 52
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 52
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -142.60056}
+  m_margin: {x: -20.018799, y: 16.014883, z: -20.018677, w: -114.574265}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2341,8 +2341,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1024, y: 1024}
+  m_AnchoredPosition: {x: 26.865, y: 26.743}
+  m_SizeDelta: {x: 1153.354, y: 1008}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2116516095
 MonoBehaviour:
