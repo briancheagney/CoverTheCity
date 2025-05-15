@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class CharterSlect : MonoBehaviour
 {
     public Button[] buttons;
+    public Sprite clickedSprite; //new sprite to switch button to
+
     private void Awake()
     {
         int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
@@ -21,6 +23,11 @@ public class CharterSlect : MonoBehaviour
     }
     public void OpenLevel(int levelId)
     {
+        Button clickedButton = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
+        if (clickedButton != null && clickedSprite != null)
+        {
+            clickedButton.image.sprite = clickedSprite;
+        }
         SceneManager.LoadScene(levelId);
     }
 }
