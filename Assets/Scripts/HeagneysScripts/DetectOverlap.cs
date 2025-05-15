@@ -17,6 +17,7 @@ public class DetectOverlap : MonoBehaviour
 
     private GameManager gameManager;
 
+    public GameObject bagobjecttoshow;
     public GameObject objectToShow;
     public GameObject objectToHide;
     public GameObject objectToDraggable; //make this object draggable.
@@ -111,6 +112,14 @@ public class DetectOverlap : MonoBehaviour
                 //end new code
             }
             isOverlapHandled = true; // Mark overlap as handled
+
+            if (bagobjecttoshow != null)
+            {
+                Debug.Log("Showing Object");
+                bagobjecttoshow.SetActive(true);
+                //objectToHide.SetActive(false);
+            }
+
 
             if (objectToShow != null)
             {
