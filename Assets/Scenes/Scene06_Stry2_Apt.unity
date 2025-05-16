@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.9490196}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1297,8 +1297,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -532, y: 65.7851}
-  m_SizeDelta: {x: 590.52, y: 655.7968}
+  m_AnchoredPosition: {x: -532, y: 118.12843}
+  m_SizeDelta: {x: 590.52, y: 551.1102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986117461
 MonoBehaviour:
@@ -1960,8 +1960,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.736, y: 140.47}
-  m_SizeDelta: {x: 358.57, y: 280.94}
+  m_AnchoredPosition: {x: 0.000002861, y: 90}
+  m_SizeDelta: {x: 362.4472, y: 311.9583}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1415828246
 MonoBehaviour:
@@ -1983,9 +1983,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Add something here about helping people with blankets.
-
-'
+  m_text: Sometimes, all that separates a night of suffering from one of solace is
+    a single blanket.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2012,14 +2011,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2048,7 +2047,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -33.38289, y: -33.383102, z: -30.601273, w: -38.94674}
+  m_margin: {x: -33.38289, y: 5.389801, z: -30.601273, w: -54.455925}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2098,7 +2097,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076294, y: -194.8}
+  m_AnchoredPosition: {x: 0.0000076294, y: -149}
   m_SizeDelta: {x: 246.24, y: 93.985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472946464
@@ -2433,7 +2432,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -469, y: -301.3}
+  m_AnchoredPosition: {x: -718.5, y: -351.37}
   m_SizeDelta: {x: 192.514, y: 192.518}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901467479
@@ -2780,7 +2779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveButton: {fileID: 869630283}
-  targetPosition: {x: -1.926, y: -1.258, z: 0}
+  targetPosition: {x: -3, y: -1.5, z: 0}
   speed: 1
   delay: 1
   newObject: {fileID: 1901467477}
