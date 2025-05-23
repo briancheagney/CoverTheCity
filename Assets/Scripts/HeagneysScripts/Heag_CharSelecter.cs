@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class StorySelectionManager : MonoBehaviour
@@ -40,5 +41,6 @@ public class StorySelectionManager : MonoBehaviour
     {
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
+        SceneManager.LoadScene("Scene01_Start");
     }
 }
