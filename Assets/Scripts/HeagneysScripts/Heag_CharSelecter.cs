@@ -9,6 +9,8 @@ public class StorySelectionManager : MonoBehaviour
     public Button story1Button;
     public Button story2Button;
     public Button story3Button;
+    public GameObject initialText;
+    public GameObject doneText;
 
     void Start()
     {
@@ -26,6 +28,20 @@ public class StorySelectionManager : MonoBehaviour
         story1Button.onClick.AddListener(() => PlayStory(1));
         story2Button.onClick.AddListener(() => PlayStory(2));
         story3Button.onClick.AddListener(() => PlayStory(3));
+
+        //check to see if all buttons are complete
+        if (isStory1Completed && isStory2Completed && isStory3Completed)
+        {
+            initialText.SetActive(false);
+            doneText.SetActive(true); // make sure it’s active
+            CanvasGroup cg = doneText.GetComponent<CanvasGroup>();
+            if (cg != null)
+            {
+                cg.alpha = 0f;
+                cg.interactable = false;
+                cg.blocksRaycasts = false;
+            }
+        }
     }
 
     void PlayStory(int storyNumber)
@@ -42,5 +58,10 @@ public class StorySelectionManager : MonoBehaviour
         PlayerPrefs.DeleteAll();
         PlayerPrefs.Save();
         SceneManager.LoadScene("Scene01_Start");
+    }
+
+    public void OpenWebPage(string url)
+    {
+        Application.OpenURL(url);
     }
 }
