@@ -13,6 +13,7 @@ public class MoveNewObject : MonoBehaviour
     public float speed = 2f; // Speed of movement
     public float delay = 2f; // Delay before moving
     public GameObject enddialoguebox; //this is the last dialogue box that will give us a button to take us to the character select
+    public float fadeDuration = 1f;
 
     private bool shouldMove = false;
 
@@ -81,7 +82,29 @@ public class MoveNewObject : MonoBehaviour
             if (enddialoguebox != null)
             {
                 enddialoguebox.SetActive(true);
+                StartCoroutine(FadeIn(enddialoguebox.GetComponent<CanvasGroup>()));
             }
         }
+    }
+
+
+    private IEnumerator FadeIn(CanvasGroup canvasGroup)
+    {
+        canvasGroup.alpha = 0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
+
+        float elapsed = 0f;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Clamp01(elapsed / fadeDuration);
+            yield return null;
+        }
+
+        canvasGroup.alpha = 1f;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
     }
 }

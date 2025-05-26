@@ -38,8 +38,8 @@ public class StorySelectionManager : MonoBehaviour
             if (cg != null)
             {
                 cg.alpha = 0f;
-                cg.interactable = false;
-                cg.blocksRaycasts = false;
+                cg.interactable = true;
+                cg.blocksRaycasts = true;
             }
         }
     }
@@ -62,6 +62,11 @@ public class StorySelectionManager : MonoBehaviour
 
     public void OpenWebPage(string url)
     {
+        Debug.Log("Trying to open: " + url); 
         Application.OpenURL(url);
+    }
+    public void TestClick()
+    {
+        Debug.Log("Button was clicked!");
     }
 }
